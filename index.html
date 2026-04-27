@@ -1,203 +1,385 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>石铖铖｜个人简历</title>
-  <meta name="description" content="石铖铖的个人简历网站，展示个人经历、项目经验、技能栈和联系方式。" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
-      background: #f5f7fb;
-      color: #1f2937;
-      line-height: 1.7;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .hero {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 40px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      margin: 0 0 12px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      color: #4b5563;
-      margin: 0 0 24px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin-right: 12px;
-      margin-bottom: 12px;
-      padding: 10px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      background: #2563eb;
-      color: white;
-      font-weight: 600;
-    }
-
-    .buttons a.secondary {
-      background: #e5e7eb;
-      color: #111827;
-    }
-
-    .section {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 28px 32px;
-      margin-bottom: 24px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-    }
-
-    .section h2 {
-      margin-top: 0;
-      border-left: 4px solid #2563eb;
-      padding-left: 12px;
-      font-size: 24px;
-    }
-
-    .item {
-      margin-bottom: 18px;
-    }
-
-    .item h3 {
-      margin-bottom: 4px;
-      font-size: 18px;
-    }
-
-    .item .time {
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #eef2ff;
-      color: #3730a3;
-      padding: 5px 10px;
-      border-radius: 999px;
-      margin: 4px 6px 4px 0;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      color: #6b7280;
-      padding: 24px 0;
-    }
-
-    @media (max-width: 640px) {
-      .hero {
-        padding: 28px;
-      }
-
-      .hero h1 {
-        font-size: 28px;
-      }
-
-      .section {
-        padding: 24px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="张三的个人主页 - Java 后端开发工程师">
+    <title>石铖铖 | Java 后端开发工程师</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-  <div class="container">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">sccWisdom.dev</div>
+            <button class="mobile-menu-btn" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#about" class="nav-link">关于我</a></li>
+                <li><a href="#skills" class="nav-link">技能栈</a></li>
+                <li><a href="#projects" class="nav-link">项目经历</a></li>
+                <li><a href="#experience" class="nav-link">工作经历</a></li>
+                <li><a href="#contact" class="nav-link">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <section class="hero">
-      <h1>你好，我是石铖铖</h1>
-      <p>Java 后端开发工程师 / 政务信息化项目参与者 / 数据治理与智能应用方向学习者</p>
-
-      <div class="buttons">
-        <a href="./resume.pdf" target="_blank">下载 PDF 简历</a>
-        <a class="secondary" href="mailto:your-email@example.com">联系我</a>
-      </div>
+    <!-- 首页 Hero 区域 -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Available for new opportunities
+                </div>
+                <h1 class="hero-title">
+                    你好，我是 <span class="gradient-text">张三</span>
+                </h1>
+                <div class="typewriter-container">
+                    <span class="typewriter-prefix">我专注于</span>
+                    <span class="typewriter-text"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    专注于政务信息化、数据治理、智能运维与 AI 智能体应用，
+                    致力于把复杂业务需求转化为稳定、清晰、可落地的系统能力。
+                </p>
+                <div class="hero-buttons">
+                    <a href="resume.pdf" class="btn btn-primary" download>
+                        <span class="btn-icon">📄</span>
+                        下载简历
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span class="btn-icon">🚀</span>
+                        查看项目
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span class="btn-icon">️</span>
+                        联系我
+                    </a>
+                </div>
+            </div>
+            <div class="hero-card profile-card">
+                <div class="profile-avatar">
+                    <img src="assets/images/avatar.png" alt="张三头像" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="avatar-placeholder">👨‍💻</div>
+                </div>
+                <h3 class="profile-name">张三</h3>
+                <p class="profile-title">Java 后端开发工程师</p>
+                <div class="profile-tags">
+                    <span class="tag">政务信息化</span>
+                    <span class="tag">数据治理</span>
+                    <span class="tag">AI 应用探索者</span>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number gradient-text">3+</span>
+                        <span class="stat-label">项目经验</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number gradient-text">10+</span>
+                        <span class="stat-label">技术栈</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number gradient-text">5+</span>
+                        <span class="stat-label">核心模块</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background-effect"></div>
     </section>
 
-    <section class="section">
-      <h2>个人简介</h2>
-      <p>
-        我具备 Java 后端开发、Spring Boot 项目开发、数据库设计、接口联调和政务信息化项目实践经验。
-        关注数据治理、智能问答、智能体编排、运维平台和业务系统建设。
-      </p>
+    <!-- 关于我 -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <p class="section-subtitle">关注业务流程、数据驱动、智能问答、智能体编排和运维管理平台建设。</p>
+            <div class="cards-grid">
+                <div class="card capability-card">
+                    <div class="card-icon">💻</div>
+                    <h3 class="card-title">工程开发能力</h3>
+                    <p class="card-description">
+                        熟悉 Java、Spring Boot、MyBatis-Plus、数据库设计、接口开发、前后端联调和问题排查。
+                    </p>
+                </div>
+                <div class="card capability-card">
+                    <div class="card-icon"></div>
+                    <h3 class="card-title">业务理解能力</h3>
+                    <p class="card-description">
+                        参与政务信息化、数据治理、智能运维、监管看板等项目，能够理解业务流程并抽象功能模块。
+                    </p>
+                </div>
+                <div class="card capability-card">
+                    <div class="card-icon">🤖</div>
+                    <h3 class="card-title">智能应用探索</h3>
+                    <p class="card-description">
+                        关注 RAG、Text2SQL、智能体编排、知识库构建、AI 辅助开发和自动化文档生成。
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="section">
-      <h2>技能栈</h2>
-      <span class="tag">Java</span>
-      <span class="tag">Spring Boot</span>
-      <span class="tag">MyBatis-Plus</span>
-      <span class="tag">MySQL</span>
-      <span class="tag">达梦数据库</span>
-      <span class="tag">Vue 3</span>
-      <span class="tag">Element Plus</span>
-      <span class="tag">ECharts</span>
-      <span class="tag">Git</span>
+    <!-- 技能栈 -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">技能栈</h2>
+            <div class="skills-container">
+                <div class="skill-tag">
+                    <span class="skill-icon">☕</span>
+                    Java
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon">🌱</span>
+                    Spring Boot
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon"></span>
+                    MyBatis-Plus
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon">🐬</span>
+                    MySQL
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon"></span>
+                    达梦数据库
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon"></span>
+                    Redis
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon">💚</span>
+                    Vue 3
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon">🎨</span>
+                    Element Plus
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon">📈</span>
+                    ECharts
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon"></span>
+                    Axios
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon"></span>
+                    Git
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon">🐧</span>
+                    Linux
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon">⚙️</span>
+                    Nginx
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon">🧠</span>
+                    RAG
+                </div>
+                <div class="skill-tag">
+                    <span class="skill-icon">🤖</span>
+                    智能体编排
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="section">
-      <h2>项目经历</h2>
-
-      <div class="item">
-        <h3>智能运维管理平台</h3>
-        <div class="time">2024 - 2025</div>
-        <p>
-          参与服务门户、ITSM 工单流转、告警接入、自动派单、运维报表等模块建设，
-          支持事件、问题、变更、请求等运维流程闭环管理。
-        </p>
-      </div>
-
-      <div class="item">
-        <h3>数据治理与智能问答平台</h3>
-        <div class="time">2025 - 2026</div>
-        <p>
-          参与数据目录、元数据、血缘数据、非结构化知识库问答等能力建设，
-          支持自然语言查询、知识检索和业务辅助分析。
-        </p>
-      </div>
+    <!-- 项目经历 -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">项目经历</h2>
+            <div class="projects-grid">
+                <div class="card project-card">
+                    <div class="project-header">
+                        <div class="project-icon"></div>
+                        <h3 class="project-title">智能运维管理平台</h3>
+                    </div>
+                    <p class="project-description">
+                        参与服务门户、ITSM 工单流转、SLA 管理、多源告警接入、自动派单和运维报表等模块建设，支撑事件、问题、变更、请求等流程闭环。
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">MyBatis</span>
+                        <span class="tag">ECharts</span>
+                        <span class="tag">ITSM</span>
+                    </div>
+                    <a href="#" class="project-link">
+                        查看详情
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <div class="project-icon">💬</div>
+                        <h3 class="project-title">数据治理与智能问答平台</h3>
+                    </div>
+                    <p class="project-description">
+                        围绕数据目录、元数据、血缘数据、政策文件、操作手册等内容，建设智能问答与问数能力，支持结构化、半结构化和非结构化数据问答。
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">RAG</span>
+                        <span class="tag">Text2SQL</span>
+                        <span class="tag">知识库</span>
+                        <span class="tag">智能问答</span>
+                    </div>
+                    <a href="#" class="project-link">
+                        查看详情
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <h3 class="project-title">监管驾驶舱可视化</h3>
+                    </div>
+                    <p class="project-description">
+                        参与监管总览、项目穿透追踪、主体关系图谱、风险热力图等页面设计，通过可视化方式展示监管态势、风险分布和处置进展。
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Vue 3</span>
+                        <span class="tag">Element Plus</span>
+                        <span class="tag">ECharts</span>
+                        <span class="tag">可视化</span>
+                    </div>
+                    <a href="#" class="project-link">
+                        查看详情
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <div class="project-icon">📝</div>
+                        <h3 class="project-title">验收材料自动生成工具</h3>
+                    </div>
+                    <p class="project-description">
+                        基于模板、占位符、编写指令和生成脚本，实现验收材料自动填充与批量生成，提升文档交付效率和规范性。
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Word 自动化</span>
+                        <span class="tag">模板填充</span>
+                        <span class="tag">Skill</span>
+                    </div>
+                    <a href="#" class="project-link">
+                        查看详情
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="section">
-      <h2>工作经历</h2>
-
-      <div class="item">
-        <h3>某某公司｜Java 开发工程师</h3>
-        <div class="time">2023 - 至今</div>
-        <p>
-          负责后端接口开发、数据库表设计、业务逻辑实现、前后端联调、问题排查和项目交付支持。
-        </p>
-      </div>
+    <!-- 工作经历 -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">工作经历</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="card experience-card">
+                            <div class="experience-header">
+                                <span class="experience-period">2024 - 至今</span>
+                                <span class="experience-company">某某公司</span>
+                            </div>
+                            <h3 class="experience-position">Java 开发工程师</h3>
+                            <p class="experience-description">
+                                负责后端接口开发、数据库表设计、业务逻辑实现、系统联调、问题排查和项目交付支持。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="card experience-card">
+                            <div class="experience-header">
+                                <span class="experience-period">2023 - 2024</span>
+                                <span class="experience-type">项目实践</span>
+                            </div>
+                            <h3 class="experience-position">政务信息化方向</h3>
+                            <p class="experience-description">
+                                参与数据治理、智能运维、监管可视化、智能问答等项目，积累了业务系统建设和交付经验。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="section">
-      <h2>联系方式</h2>
-      <p>邮箱：your-email@example.com</p>
-      <p>GitHub：https://github.com/yourname</p>
-      <p>博客：https://yourname.github.io</p>
+    <!-- 联系我 -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">联系我</h2>
+            <div class="contact-container">
+                <div class="contact-intro">
+                    <h3 class="contact-heading">期待与你交流 🤝</h3>
+                    <p class="contact-text">
+                        如果你对任何职位感兴趣，或者想探讨合作机会，欢迎随时联系我。
+                    </p>
+                    <a href="mailto:zhangsan@example.com" class="btn btn-primary">
+                        <span class="btn-icon">✉️</span>
+                        发送邮件
+                    </a>
+                </div>
+                <div class="contact-cards">
+                    <div class="card contact-card">
+                        <div class="contact-icon"></div>
+                        <h4 class="contact-label">邮箱</h4>
+                        <a href="mailto:zhangsan@example.com" class="contact-value">zhangsan@example.com</a>
+                    </div>
+                    <div class="card contact-card">
+                        <div class="contact-icon">🐙</div>
+                        <h4 class="contact-label">GitHub</h4>
+                        <a href="https://github.com/yourname" target="_blank" class="contact-value">github.com/zhangsan</a>
+                    </div>
+                    <div class="card contact-card">
+                        <div class="contact-icon">📄</div>
+                        <h4 class="contact-label">简历下载</h4>
+                        <a href="resume.pdf" class="contact-value" download>下载我的 PDF 简历</a>
+                    </div>
+                    <div class="card contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h4 class="contact-label">所在地</h4>
+                        <p class="contact-value">中国 · 北京</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-      © 2026 石铖铖. All rights reserved.
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 张三。Built with GitHub Pages.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/yourname" target="_blank" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:zhangsan@example.com" aria-label="邮箱">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-  </div>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
