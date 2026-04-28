@@ -9,6 +9,7 @@
 ## 功能特性
 
 - ✨ **深色科技风格**：深蓝渐变背景、玻璃拟态卡片、渐变光效
+- 🎲 **3D 魔方背景**：首页科技感 3D 魔方动画，滚动时拆解聚合
 - 🎨 **响应式设计**：完美适配 PC、平板、手机各种设备
 - 🚀 **轻量动画**：打字机效果、卡片悬浮、滚动淡入动画
 - 📱 **移动端优化**：可折叠导航栏、单列布局、触摸友好
@@ -18,16 +19,17 @@
 
 ```
 personal-portfolio/
-├── index.html          # 主页面
-├── resume.pdf          # 简历文件（需自行添加）
-├── README.md           # 项目说明
+├── index.html              # 主页面
+├── resume.pdf              # 简历文件（需自行添加）
+├── README.md               # 项目说明
 └── assets/
     ├── images/
-    │   └── avatar.png  # 头像图片（需自行添加）
+    │   └── avatar.png      # 头像图片（需自行添加）
     ├── css/
-    │   └── style.css   # 样式文件
+    │   └── style.css       # 样式文件
     └── js/
-        └── main.js     # 交互脚本
+        ├── main.js         # 交互脚本
+        └── cube-animation.js  # 3D 魔方背景动画
 ```
 
 ## 快速开始
@@ -166,6 +168,36 @@ const typewriterTexts = [
     '你的职业定位 3'
 ];
 ```
+
+### 配置 3D 魔方背景
+
+在 `assets/js/cube-animation.js` 中修改 `CONFIG` 对象：
+
+```javascript
+const CONFIG = {
+    // 魔方大小（建议范围：0.5-1.5）
+    cubeSize: 0.8,
+    
+    // 分散距离（建议范围：2-5）
+    disperseDistance: 3,
+    
+    // 旋转速度（建议范围：0.001-0.01）
+    rotationSpeed: 0.002,
+    
+    // 透明度（建议范围：0.3-0.8）
+    opacity: 0.6,
+    
+    // 移动端是否启用（默认 false 以保证性能）
+    enableMobile: false
+};
+```
+
+**参数说明：**
+- `cubeSize`: 单个小立方体的大小
+- `disperseDistance`: 滚动时立方体分散的最大距离
+- `rotationSpeed`: 立方体自转速度
+- `opacity`: 立方体透明度
+- `enableMobile`: 是否在移动端启用（建议保持 false）
 
 ### 添加新技能
 

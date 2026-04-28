@@ -80,6 +80,27 @@ body::before {
     z-index: -1;
 }
 
+/* ===================================
+   魔方背景容器
+   =================================== */
+.cube-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cube-background canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    outline: none;
+}
+
 .container {
     max-width: var(--container-max);
     margin: 0 auto;
@@ -257,10 +278,14 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content {
     animation: fadeInUp 0.8s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .status-badge {
@@ -341,6 +366,8 @@ img {
     backdrop-filter: blur(10px);
     animation: fadeInUp 0.8s ease 0.2s backwards;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-card:hover {
@@ -843,8 +870,11 @@ img {
    响应式设计
    =================================== */
 
-/* 平板端 (1024px 及以下) */
+/* 平板端 (1024px 及以下） */
 @media (max-width: 1024px) {
+    .cube-background {
+        opacity: 0.5;
+    }
     .hero-container {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -895,6 +925,10 @@ img {
 
 /* 手机端 (768px 及以下) */
 @media (max-width: 768px) {
+    .cube-background {
+        display: none;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 70px;
