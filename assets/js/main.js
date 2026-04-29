@@ -68,9 +68,14 @@ function initMobileMenu() {
 function initNavScroll() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const navbar = document.querySelector('.navbar');
     
     function highlightNavLink() {
         const scrollY = window.pageYOffset;
+
+        if (navbar) {
+            navbar.classList.toggle('home-hidden', scrollY < window.innerHeight * 0.58);
+        }
         
         sections.forEach(section => {
             const sectionHeight = section.offsetHeight;
@@ -89,6 +94,7 @@ function initNavScroll() {
     }
     
     window.addEventListener('scroll', highlightNavLink);
+    highlightNavLink();
 }
 
 // ===================================
@@ -108,7 +114,7 @@ function initScrollAnimations() {
         });
     }, observerOptions);
     
-    document.querySelectorAll('.card, .section-title, .skill-tag, .timeline-item, .project-timeline-card, .project-node, .experience-main-card, .experience-growth-card, .education-strip').forEach(el => {
+    document.querySelectorAll('.card, .section-title, .timeline-item, .capability-panel, .project-timeline-card, .project-node, .experience-main-card, .experience-growth-card, .education-strip').forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
     });

@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+
+*.log
+
+.idea/
+.vscode/
+.github/
+
+tests/
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo

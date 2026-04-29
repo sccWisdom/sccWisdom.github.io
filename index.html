@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar">
+    <nav class="navbar home-hidden">
         <div class="container nav-container">
             <div class="logo">sccWisdom.dev</div>
             <button class="mobile-menu-btn" aria-label="菜单">
@@ -33,96 +33,181 @@
     <!-- 首页 Hero 区域 -->
     <section id="home" class="hero">
         <div id="cube-background" class="cube-background"></div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="status-badge">
-                    <span class="status-dot"></span>
-                    Available for new opportunities
-                </div>
-                <h1 class="hero-title">
-                    你好，我是 <span class="gradient-text">石铖铖</span>
-                </h1>
-                <div class="typewriter-container">
-                    <span class="typewriter-prefix">我专注于</span>
-                    <span class="typewriter-text"></span>
-                    <span class="typewriter-cursor">|</span>
-                </div>
-                <p class="hero-description">
-                    专注于政务信息化、数据治理、智能运维与 AI 智能体应用，
-                    致力于把复杂业务需求转化为稳定、清晰、可落地的系统能力。
-                </p>
-                <div class="hero-buttons">
-                    <a href="resume.pdf" class="btn btn-primary" download>
-                        <span class="btn-icon">📄</span>
-                        下载简历
-                    </a>
-                    <a href="#projects" class="btn btn-secondary">
-                        <span class="btn-icon">🚀</span>
-                        查看项目
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <span class="btn-icon">️</span>
-                        联系我
-                    </a>
-                </div>
+        <div class="hero-reflection" aria-hidden="true"></div>
+        <div class="container cinematic-hero-container">
+            <div class="hero-ambient-frame" aria-hidden="true">
+                <span class="ambient-corner ambient-corner-1"></span>
+                <span class="ambient-corner ambient-corner-2"></span>
+                <span class="ambient-corner ambient-corner-3"></span>
+                <span class="ambient-corner ambient-corner-4"></span>
+                <span class="ambient-ring ambient-ring-1"></span>
+                <span class="ambient-ring ambient-ring-2"></span>
             </div>
-            <div class="hero-card profile-card">
-                <div class="profile-avatar">
-                    <img src="assets/images/avatar.png" alt="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                    <div class="avatar-placeholder">👨‍💻</div>
-                </div>
-                <h3 class="profile-name">石铖铖</h3>
-                <p class="profile-title">AI 超级产品经理</p>
-                <div class="profile-tags">
-                    <span class="tag">政务信息化</span>
-                    <span class="tag">数据治理</span>
-                    <span class="tag">AI 应用探索者</span>
-                </div>
-                <div class="profile-stats">
-                    <div class="stat-item">
-                        <span class="stat-number gradient-text">3+</span>
-                        <span class="stat-label">项目经验</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number gradient-text">10+</span>
-                        <span class="stat-label">技术栈</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number gradient-text">5+</span>
-                        <span class="stat-label">核心模块</span>
-                    </div>
-                </div>
+            <div class="hero-scroll-cue" aria-hidden="true">
+                <span></span>
             </div>
         </div>
         <div class="background-effect"></div>
     </section>
 
     <!-- 关于我 -->
-    <section id="about" class="section about">
+    <section id="about" class="section about personal-intro">
         <div class="container">
-            <h2 class="section-title">关于我</h2>
-            <p class="section-subtitle">关注业务流程、数据驱动、智能问答、智能体编排和运维管理平台建设。</p>
-            <div class="cards-grid">
-                <div class="card capability-card">
-                    <div class="card-icon">💻</div>
-                    <h3 class="card-title">工程开发能力</h3>
-                    <p class="card-description">
-                        熟悉 Java、Spring Boot、MyBatis-Plus、数据库设计、接口开发、前后端联调和问题排查。
+            <div class="intro-hero-container">
+                <div class="hero-content intro-copy">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        Available for new opportunities
+                    </div>
+                    <h1 class="hero-title">
+                        你好，我是 <span class="gradient-text">石铖铖</span>
+                    </h1>
+                    <div class="typewriter-container">
+                        <span class="typewriter-prefix">我专注于</span>
+                        <span class="typewriter-text"></span>
+                        <span class="typewriter-cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        专注于政务信息化、数据治理、智能运维与 AI 智能体应用，
+                        致力于把复杂业务需求转化为稳定、清晰、可落地的系统能力。
                     </p>
+                    <div class="hero-buttons">
+                        <a href="resume.pdf" class="btn btn-primary" download>
+                            下载简历
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            查看项目
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            联系我
+                        </a>
+                    </div>
                 </div>
-                <div class="card capability-card">
-                    <div class="card-icon"></div>
-                    <h3 class="card-title">业务理解能力</h3>
-                    <p class="card-description">
-                        参与政务信息化、数据治理、智能运维、监管看板等项目，能够理解业务流程并抽象功能模块。
-                    </p>
+                <div class="hero-card profile-card">
+                    <div class="profile-avatar">
+                        <img src="assets/images/avatar.png" alt="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="avatar-placeholder">👨‍💻</div>
+                    </div>
+                    <h3 class="profile-name">石铖铖</h3>
+                    <p class="profile-title">AI 超级产品经理</p>
+                    <div class="profile-tags">
+                        <span class="tag">政务信息化</span>
+                        <span class="tag">数据治理</span>
+                        <span class="tag">AI 应用探索者</span>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="stat-number gradient-text">5+</span>
+                            <span class="stat-label">项目经验</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number gradient-text">10+</span>
+                            <span class="stat-label">技术栈</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number gradient-text">5+</span>
+                            <span class="stat-label">核心模块</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card capability-card">
-                    <div class="card-icon">🤖</div>
-                    <h3 class="card-title">智能应用探索</h3>
-                    <p class="card-description">
-                        关注 RAG、Text2SQL、智能体编排、知识库构建、AI 辅助开发和自动化文档生成。
-                    </p>
+            </div>
+            <div class="capability-matrix-wrap">
+                <div class="capability-heading">
+                    <span class="matrix-eyebrow">Capability Matrix</span>
+                    <h2 class="section-title intro-capabilities">核心能力矩阵</h2>
+                    <p class="section-subtitle">把工程开发、项目管理、业务理解和 AI 应用落地组合成可交付的系统能力。</p>
+                </div>
+                <div class="capability-matrix">
+                    <div class="capability-panel">
+                        <div class="capability-topline">
+                            <span class="capability-index">01</span>
+                            <span class="capability-line" aria-hidden="true"></span>
+                        </div>
+                        <h3>工程开发</h3>
+                        <p>围绕政务 OA 和数据运营场景，完成后端接口、权限流程、系统联调和问题排查。</p>
+                        <div class="capability-tags">
+                            <span>Java</span>
+                            <span>Spring</span>
+                            <span>Vue2</span>
+                            <span>权限管控</span>
+                        </div>
+                        <div class="capability-proof">项目支撑：OA 项目 / 进博会数字赋能服务</div>
+                    </div>
+                    <div class="capability-panel">
+                        <div class="capability-topline">
+                            <span class="capability-index">02</span>
+                            <span class="capability-line" aria-hidden="true"></span>
+                        </div>
+                        <h3>项目管理</h3>
+                        <p>覆盖需求调研、计划排期、跨方协同、进度跟踪和验收交付，确保项目节奏可控。</p>
+                        <div class="capability-tags">
+                            <span>需求调研</span>
+                            <span>计划排期</span>
+                            <span>客户对接</span>
+                            <span>验收交付</span>
+                        </div>
+                        <div class="capability-proof">项目支撑：上海市大数据中心数据运营服务项目</div>
+                    </div>
+                    <div class="capability-panel">
+                        <div class="capability-topline">
+                            <span class="capability-index">03</span>
+                            <span class="capability-line" aria-hidden="true"></span>
+                        </div>
+                        <h3>AI 应用落地</h3>
+                        <p>围绕智能问答、智能问数和知识库建设，把大模型能力接入真实业务服务入口。</p>
+                        <div class="capability-tags">
+                            <span>智能问答</span>
+                            <span>智能问数</span>
+                            <span>知识库</span>
+                            <span>通义千问</span>
+                        </div>
+                        <div class="capability-proof">项目支撑：AI 数博士 / 智能运维平台</div>
+                    </div>
+                    <div class="capability-panel">
+                        <div class="capability-topline">
+                            <span class="capability-index">04</span>
+                            <span class="capability-line" aria-hidden="true"></span>
+                        </div>
+                        <h3>业务理解</h3>
+                        <p>理解政务信息化、数据运营和智能运维流程，将业务规则拆解为清晰模块和页面逻辑。</p>
+                        <div class="capability-tags">
+                            <span>政务信息化</span>
+                            <span>数据运营</span>
+                            <span>ITSM</span>
+                            <span>SLA</span>
+                        </div>
+                        <div class="capability-proof">项目支撑：智能运维平台 / 数据归集交接</div>
+                    </div>
+                    <div class="capability-panel">
+                        <div class="capability-topline">
+                            <span class="capability-index">05</span>
+                            <span class="capability-line" aria-hidden="true"></span>
+                        </div>
+                        <h3>产品原型</h3>
+                        <p>结合 Trae、ChatGPT、Codex 与 Vibe Coding 快速产出可演示原型，提升需求验证效率。</p>
+                        <div class="capability-tags">
+                            <span>Trae</span>
+                            <span>Codex</span>
+                            <span>Vibe Coding</span>
+                            <span>Demo</span>
+                        </div>
+                        <div class="capability-proof">项目支撑：移动门户 / AI 数博士</div>
+                    </div>
+                    <div class="capability-panel">
+                        <div class="capability-topline">
+                            <span class="capability-index">06</span>
+                            <span class="capability-line" aria-hidden="true"></span>
+                        </div>
+                        <h3>交付文档</h3>
+                        <p>沉淀方案、汇报、测试、验收和交接材料，让项目过程可追踪、成果可验收。</p>
+                        <div class="capability-tags">
+                            <span>方案设计</span>
+                            <span>PPT 汇报</span>
+                            <span>测试文档</span>
+                            <span>交接方案</span>
+                        </div>
+                        <div class="capability-proof">项目支撑：数据归集系统运维交接</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,67 +216,113 @@
     <!-- 技能栈 -->
     <section id="skills" class="section skills">
         <div class="container">
-            <h2 class="section-title">技能栈</h2>
+            <h2 class="section-title">AI 技术栈</h2>
+            <p class="section-subtitle">围绕大模型应用、知识库、智能问答、智能体编排和 AI 辅助交付构建能力组合。</p>
             <div class="skills-container">
-                <div class="skill-tag">
-                    <span class="skill-icon">☕</span>
-                    Java
+                <div class="skill-tag skill-accent-violet">
+                    <span class="skill-icon">LLM</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">大模型应用</span>
+                        <span class="skill-desc">LLM Application</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon">🌱</span>
-                    Spring Boot
+                <div class="skill-tag skill-accent-blue">
+                    <span class="skill-icon">RAG</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">RAG 检索增强</span>
+                        <span class="skill-desc">Retrieval Augmented</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon"></span>
-                    MyBatis-Plus
+                <div class="skill-tag skill-accent-blue">
+                    <span class="skill-icon">KB</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">知识库构建</span>
+                        <span class="skill-desc">Knowledge Base</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon">🐬</span>
-                    MySQL
+                <div class="skill-tag skill-accent-green">
+                    <span class="skill-icon">QA</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">智能问答</span>
+                        <span class="skill-desc">Q&amp;A System</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon"></span>
-                    达梦数据库
+                <div class="skill-tag skill-accent-violet">
+                    <span class="skill-icon">SQL</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">Text2SQL</span>
+                        <span class="skill-desc">Text to SQL</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon"></span>
-                    Redis
+                <div class="skill-tag skill-accent-cyan">
+                    <span class="skill-icon">AGT</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">智能体编排</span>
+                        <span class="skill-desc">Agent Orchestration</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon">💚</span>
-                    Vue 3
+                <div class="skill-tag skill-accent-violet">
+                    <span class="skill-icon">PMT</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">Prompt Engineering</span>
+                        <span class="skill-desc">Prompt Engineering</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon">🎨</span>
-                    Element Plus
+                <div class="skill-tag skill-accent-blue">
+                    <span class="skill-icon">OPS</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">自动化处理</span>
+                        <span class="skill-desc">Automation Ops</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon">📈</span>
-                    ECharts
+                <div class="skill-tag skill-accent-blue">
+                    <span class="skill-icon">DEMO</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">AI 原型开发</span>
+                        <span class="skill-desc">AI Prototype</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon"></span>
-                    Axios
+                <div class="skill-tag skill-accent-cyan">
+                    <span class="skill-icon">TR</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">Trae</span>
+                        <span class="skill-desc">AI Dev Assistant</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon"></span>
-                    Git
+                <div class="skill-tag skill-accent-green">
+                    <span class="skill-icon">GPT</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">ChatGPT</span>
+                        <span class="skill-desc">AI Assistant</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon">🐧</span>
-                    Linux
+                <div class="skill-tag skill-accent-blue">
+                    <span class="skill-icon">CDX</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">Codex</span>
+                        <span class="skill-desc">Code Generation</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon">⚙️</span>
-                    Nginx
+                <div class="skill-tag skill-accent-violet">
+                    <span class="skill-icon">PY</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-desc">Programming</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon">🧠</span>
-                    RAG
+                <div class="skill-tag skill-accent-cyan">
+                    <span class="skill-icon">JV</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">Java/Spring</span>
+                        <span class="skill-desc">Backend</span>
+                    </span>
                 </div>
-                <div class="skill-tag">
-                    <span class="skill-icon">🤖</span>
-                    智能体编排
+                <div class="skill-tag skill-accent-violet">
+                    <span class="skill-icon">VIS</span>
+                    <span class="skill-copy">
+                        <span class="skill-name">Vue/可视化</span>
+                        <span class="skill-desc">Frontend</span>
+                    </span>
                 </div>
             </div>
         </div>
