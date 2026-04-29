@@ -108,7 +108,7 @@ function initScrollAnimations() {
         });
     }, observerOptions);
     
-    document.querySelectorAll('.card, .section-title, .skill-tag, .timeline-item').forEach(el => {
+    document.querySelectorAll('.card, .section-title, .skill-tag, .timeline-item, .project-timeline-card, .project-node, .experience-main-card, .experience-growth-card, .education-strip').forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
     });
