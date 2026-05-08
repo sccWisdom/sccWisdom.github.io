@@ -1,630 +1,734 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="石铖铖的个人主页 - AI 超级产品经理">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="石铖铖的个人主页 - AI 超级产品经理" />
     <title>石铖铖 | AI 超级产品经理</title>
-    <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Loading 页面 -->
     <div id="loading-overlay">
-        <div class="loading-background">
-            <div class="loading-particles"></div>
-            <div class="loading-ambient-orb loading-orb-1"></div>
-            <div class="loading-ambient-orb loading-orb-2"></div>
-            <div class="loading-grid-overlay"></div>
+      <div class="loading-background">
+        <div class="loading-particles"></div>
+        <div class="loading-ambient-orb loading-orb-1"></div>
+        <div class="loading-ambient-orb loading-orb-2"></div>
+        <div class="loading-grid-overlay"></div>
+      </div>
+      <div class="loading-content">
+        <div class="loading-logo">
+          <span class="logo-bracket">[</span>
+          <span class="logo-text">PORTFOLIO</span>
+          <span class="logo-bracket">]</span>
         </div>
-        <div class="loading-content">
-            <div class="loading-logo">
-                <span class="logo-bracket">[</span>
-                <span class="logo-text">PORTFOLIO</span>
-                <span class="logo-bracket">]</span>
+        <div class="loading-progress-container">
+          <div class="loading-progress-track">
+            <div class="loading-progress-bar">
+              <div class="loading-progress-glow"></div>
             </div>
-            <div class="loading-progress-container">
-                <div class="loading-progress-track">
-                    <div class="loading-progress-bar">
-                        <div class="loading-progress-glow"></div>
-                    </div>
-                    <div class="loading-progress-text">
-                        <span class="loading-percent">0</span>
-                        <span class="loading-percent-symbol">%</span>
-                    </div>
-                </div>
-                <div class="loading-status-text">Initializing systems...</div>
+            <div class="loading-progress-text">
+              <span class="loading-percent">0</span>
+              <span class="loading-percent-symbol">%</span>
             </div>
-            <div class="loading-tips">Powered by Three.js & Canvas</div>
+          </div>
+          <div class="loading-status-text">Initializing systems...</div>
         </div>
-        <button class="loading-skip-btn">跳过 ></button>
+        <div class="loading-tips">Powered by Three.js & Canvas</div>
+      </div>
+      <button class="loading-skip-btn">跳过 ></button>
     </div>
 
     <!-- 导航栏 -->
     <nav class="navbar home-hidden">
-        <div class="container nav-container">
-            <div class="logo">sccWisdom.dev</div>
-            <button class="mobile-menu-btn" aria-label="菜单">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">首页</a></li>
-                <li><a href="#about" class="nav-link">关于我</a></li>
-                <li><a href="#skills" class="nav-link">技能栈</a></li>
-                <li><a href="notes.html" class="nav-link">学习笔记</a></li>
-                <li><a href="#projects" class="nav-link">项目经历</a></li>
-                <li><a href="#experience" class="nav-link">工作经历</a></li>
-                <li><a href="#contact" class="nav-link">联系我</a></li>
-            </ul>
-        </div>
+      <div class="container nav-container">
+        <div class="logo">sccWisdom.dev</div>
+        <button class="mobile-menu-btn" aria-label="菜单">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">首页</a></li>
+          <li><a href="#about" class="nav-link">关于我</a></li>
+          <li><a href="#skills" class="nav-link">技能栈</a></li>
+          <li><a href="notes.html" class="nav-link">学习笔记</a></li>
+          <li><a href="#projects" class="nav-link">项目经历</a></li>
+          <li><a href="#experience" class="nav-link">工作经历</a></li>
+          <li><a href="#contact" class="nav-link">联系我</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- 首页 Hero 区域 -->
     <section id="home" class="hero">
-        <div id="cube-background" class="cube-background"></div>
-        <div class="hero-depth-vignette" aria-hidden="true"></div>
-        <div class="hero-reflection" aria-hidden="true"></div>
-        <div class="container cinematic-hero-container">
-            <div class="hero-ambient-frame" aria-hidden="true">
-                <span class="ambient-corner ambient-corner-1"></span>
-                <span class="ambient-corner ambient-corner-2"></span>
-                <span class="ambient-corner ambient-corner-3"></span>
-                <span class="ambient-corner ambient-corner-4"></span>
-                <span class="ambient-ring ambient-ring-1"></span>
-                <span class="ambient-ring ambient-ring-2"></span>
-            </div>
-            <div class="hero-scroll-cue" aria-hidden="true">
-                <span></span>
-            </div>
+      <div id="cube-background" class="cube-background"></div>
+      <div class="hero-depth-vignette" aria-hidden="true"></div>
+      <div class="hero-reflection" aria-hidden="true"></div>
+      <div class="container cinematic-hero-container">
+        <div class="hero-ambient-frame" aria-hidden="true">
+          <span class="ambient-corner ambient-corner-1"></span>
+          <span class="ambient-corner ambient-corner-2"></span>
+          <span class="ambient-corner ambient-corner-3"></span>
+          <span class="ambient-corner ambient-corner-4"></span>
+          <span class="ambient-ring ambient-ring-1"></span>
+          <span class="ambient-ring ambient-ring-2"></span>
         </div>
-        <div class="background-effect"></div>
+        <div class="hero-scroll-cue" aria-hidden="true">
+          <span></span>
+        </div>
+      </div>
+      <div class="background-effect"></div>
     </section>
 
     <!-- 关于我 -->
     <section id="about" class="section about personal-intro">
-        <div class="container">
-            <div class="intro-hero-container">
-                <div class="hero-content intro-copy">
-                    <div class="status-badge">
-                        <span class="status-dot"></span>
-                        Available for new opportunities
-                    </div>
-                    <h1 class="hero-title">
-                        你好，我是 <span class="gradient-text">石铖铖</span>
-                    </h1>
-                    <div class="typewriter-container">
-                        <span class="typewriter-prefix">我专注于</span>
-                        <span class="typewriter-text"></span>
-                        <span class="typewriter-cursor">|</span>
-                    </div>
-                    <p class="hero-description">
-                        专注于政务信息化、数据治理、智能运维与 AI 智能体应用，
-                        致力于把复杂业务需求转化为稳定、清晰、可落地的系统能力。
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="resume.pdf" class="btn btn-primary" download>
-                            下载简历
-                        </a>
-                        <a href="#projects" class="btn btn-secondary">
-                            查看项目
-                        </a>
-                        <a href="#contact" class="btn btn-outline">
-                            联系我
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-card profile-card">
-                    <div class="profile-avatar">
-                        <img src="assets/images/avatar.png" alt="avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="avatar-placeholder">👨‍💻</div>
-                    </div>
-                    <h3 class="profile-name">石铖铖</h3>
-                    <p class="profile-title">AI 超级产品经理</p>
-                    <div class="profile-tags">
-                        <span class="tag">政务信息化</span>
-                        <span class="tag">数据治理</span>
-                        <span class="tag">AI 应用探索者</span>
-                    </div>
-                    <div class="profile-stats">
-                        <div class="stat-item">
-                            <span class="stat-number gradient-text">5+</span>
-                            <span class="stat-label">项目经验</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number gradient-text">10+</span>
-                            <span class="stat-label">技术栈</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number gradient-text">5+</span>
-                            <span class="stat-label">核心模块</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="intro-hero-container">
+          <div class="hero-content intro-copy">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              Available for new opportunities
             </div>
-            <div class="capability-matrix-wrap">
-                <div class="capability-heading">
-                    <span class="matrix-eyebrow">Capability Matrix</span>
-                    <h2 class="section-title intro-capabilities">核心能力矩阵</h2>
-                    <p class="section-subtitle">把工程开发、项目管理、业务理解和 AI 应用落地组合成可交付的系统能力。</p>
-                </div>
-                <div class="capability-matrix">
-                    <div class="capability-panel">
-                        <div class="capability-topline">
-                            <span class="capability-index">01</span>
-                            <span class="capability-line" aria-hidden="true"></span>
-                        </div>
-                        <h3>工程开发</h3>
-                        <p>围绕政务 OA 和数据运营场景，完成后端接口、权限流程、系统联调和问题排查。</p>
-                        <div class="capability-tags">
-                            <span>Java</span>
-                            <span>Spring</span>
-                            <span>Vue2</span>
-                            <span>权限管控</span>
-                        </div>
-                        <div class="capability-proof">项目支撑：OA 项目 / 进博会数字赋能服务</div>
-                    </div>
-                    <div class="capability-panel">
-                        <div class="capability-topline">
-                            <span class="capability-index">02</span>
-                            <span class="capability-line" aria-hidden="true"></span>
-                        </div>
-                        <h3>项目管理</h3>
-                        <p>覆盖需求调研、计划排期、跨方协同、进度跟踪和验收交付，确保项目节奏可控。</p>
-                        <div class="capability-tags">
-                            <span>需求调研</span>
-                            <span>计划排期</span>
-                            <span>客户对接</span>
-                            <span>验收交付</span>
-                        </div>
-                        <div class="capability-proof">项目支撑：上海市大数据中心数据运营服务项目</div>
-                    </div>
-                    <div class="capability-panel">
-                        <div class="capability-topline">
-                            <span class="capability-index">03</span>
-                            <span class="capability-line" aria-hidden="true"></span>
-                        </div>
-                        <h3>AI 应用落地</h3>
-                        <p>围绕智能问答、智能问数和知识库建设，把大模型能力接入真实业务服务入口。</p>
-                        <div class="capability-tags">
-                            <span>智能问答</span>
-                            <span>智能问数</span>
-                            <span>知识库</span>
-                            <span>通义千问</span>
-                        </div>
-                        <div class="capability-proof">项目支撑：AI 数博士 / 智能运维平台</div>
-                    </div>
-                    <div class="capability-panel">
-                        <div class="capability-topline">
-                            <span class="capability-index">04</span>
-                            <span class="capability-line" aria-hidden="true"></span>
-                        </div>
-                        <h3>业务理解</h3>
-                        <p>理解政务信息化、数据运营和智能运维流程，将业务规则拆解为清晰模块和页面逻辑。</p>
-                        <div class="capability-tags">
-                            <span>政务信息化</span>
-                            <span>数据运营</span>
-                            <span>ITSM</span>
-                            <span>SLA</span>
-                        </div>
-                        <div class="capability-proof">项目支撑：智能运维平台 / 数据归集交接</div>
-                    </div>
-                    <div class="capability-panel">
-                        <div class="capability-topline">
-                            <span class="capability-index">05</span>
-                            <span class="capability-line" aria-hidden="true"></span>
-                        </div>
-                        <h3>产品原型</h3>
-                        <p>结合 Trae、ChatGPT、Codex 与 Vibe Coding 快速产出可演示原型，提升需求验证效率。</p>
-                        <div class="capability-tags">
-                            <span>Trae</span>
-                            <span>Codex</span>
-                            <span>Vibe Coding</span>
-                            <span>Demo</span>
-                        </div>
-                        <div class="capability-proof">项目支撑：移动门户 / AI 数博士</div>
-                    </div>
-                    <div class="capability-panel">
-                        <div class="capability-topline">
-                            <span class="capability-index">06</span>
-                            <span class="capability-line" aria-hidden="true"></span>
-                        </div>
-                        <h3>交付文档</h3>
-                        <p>沉淀方案、汇报、测试、验收和交接材料，让项目过程可追踪、成果可验收。</p>
-                        <div class="capability-tags">
-                            <span>方案设计</span>
-                            <span>PPT 汇报</span>
-                            <span>测试文档</span>
-                            <span>交接方案</span>
-                        </div>
-                        <div class="capability-proof">项目支撑：数据归集系统运维交接</div>
-                    </div>
-                </div>
+            <h1 class="hero-title">
+              你好，我是 <span class="gradient-text">石铖铖</span>
+            </h1>
+            <div class="typewriter-container">
+              <span class="typewriter-prefix">我专注于</span>
+              <span class="typewriter-text"></span>
+              <span class="typewriter-cursor">|</span>
             </div>
+            <p class="hero-description">
+              专注于政务信息化、数据治理、智能运维与 AI 智能体应用，
+              致力于把复杂业务需求转化为稳定、清晰、可落地的系统能力。
+            </p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-primary" onclick="downloadResume(); return false;">
+                下载简历
+              </a>
+              <a href="#projects" class="btn btn-secondary"> 查看项目 </a>
+              <a href="#contact" class="btn btn-outline"> 联系我 </a>
+            </div>
+          </div>
+          <div class="hero-card profile-card">
+            <div class="profile-avatar">
+              <img
+                src="assets/images/avatar.png"
+                alt="avatar"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              />
+              <div class="avatar-placeholder">👨‍💻</div>
+            </div>
+            <h3 class="profile-name">石铖铖</h3>
+            <p class="profile-title">AI 超级产品经理</p>
+            <div class="profile-tags">
+              <span class="tag">政务信息化</span>
+              <span class="tag">数据治理</span>
+              <span class="tag">AI 应用探索者</span>
+            </div>
+            <div class="profile-stats">
+              <div class="stat-item">
+                <span class="stat-number gradient-text">5+</span>
+                <span class="stat-label">项目经验</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number gradient-text">10+</span>
+                <span class="stat-label">技术栈</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number gradient-text">5+</span>
+                <span class="stat-label">核心模块</span>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="capability-matrix-wrap">
+          <div class="capability-heading">
+            <span class="matrix-eyebrow">Capability Matrix</span>
+            <h2 class="section-title intro-capabilities">核心能力矩阵</h2>
+            <p class="section-subtitle">
+              把工程开发、项目管理、业务理解和 AI
+              应用落地组合成可交付的系统能力。
+            </p>
+          </div>
+          <div class="capability-matrix">
+            <div class="capability-panel">
+              <div class="capability-topline">
+                <span class="capability-index">01</span>
+                <span class="capability-line" aria-hidden="true"></span>
+              </div>
+              <h3>工程开发</h3>
+              <p>
+                围绕政务 OA
+                和数据运营场景，完成后端接口、权限流程、系统联调和问题排查。
+              </p>
+              <div class="capability-tags">
+                <span>Java</span>
+                <span>Spring</span>
+                <span>Vue2</span>
+                <span>权限管控</span>
+              </div>
+              <div class="capability-proof">
+                项目支撑：OA 项目 / 进博会数字赋能服务
+              </div>
+            </div>
+            <div class="capability-panel">
+              <div class="capability-topline">
+                <span class="capability-index">02</span>
+                <span class="capability-line" aria-hidden="true"></span>
+              </div>
+              <h3>项目管理</h3>
+              <p>
+                覆盖需求调研、计划排期、跨方协同、进度跟踪和验收交付，确保项目节奏可控。
+              </p>
+              <div class="capability-tags">
+                <span>需求调研</span>
+                <span>计划排期</span>
+                <span>客户对接</span>
+                <span>验收交付</span>
+              </div>
+              <div class="capability-proof">
+                项目支撑：上海市大数据中心数据运营服务项目
+              </div>
+            </div>
+            <div class="capability-panel">
+              <div class="capability-topline">
+                <span class="capability-index">03</span>
+                <span class="capability-line" aria-hidden="true"></span>
+              </div>
+              <h3>AI 应用落地</h3>
+              <p>
+                围绕智能问答、智能问数和知识库建设，把大模型能力接入真实业务服务入口。
+              </p>
+              <div class="capability-tags">
+                <span>智能问答</span>
+                <span>智能问数</span>
+                <span>知识库</span>
+                <span>通义千问</span>
+              </div>
+              <div class="capability-proof">
+                项目支撑：AI 数博士 / 智能运维平台
+              </div>
+            </div>
+            <div class="capability-panel">
+              <div class="capability-topline">
+                <span class="capability-index">04</span>
+                <span class="capability-line" aria-hidden="true"></span>
+              </div>
+              <h3>业务理解</h3>
+              <p>
+                理解政务信息化、数据运营和智能运维流程，将业务规则拆解为清晰模块和页面逻辑。
+              </p>
+              <div class="capability-tags">
+                <span>政务信息化</span>
+                <span>数据运营</span>
+                <span>ITSM</span>
+                <span>SLA</span>
+              </div>
+              <div class="capability-proof">
+                项目支撑：智能运维平台 / 数据归集交接
+              </div>
+            </div>
+            <div class="capability-panel">
+              <div class="capability-topline">
+                <span class="capability-index">05</span>
+                <span class="capability-line" aria-hidden="true"></span>
+              </div>
+              <h3>产品原型</h3>
+              <p>
+                结合 Trae、ChatGPT、Codex 与 Vibe Coding
+                快速产出可演示原型，提升需求验证效率。
+              </p>
+              <div class="capability-tags">
+                <span>Trae</span>
+                <span>Codex</span>
+                <span>Vibe Coding</span>
+                <span>Demo</span>
+              </div>
+              <div class="capability-proof">项目支撑：移动门户 / AI 数博士</div>
+            </div>
+            <div class="capability-panel">
+              <div class="capability-topline">
+                <span class="capability-index">06</span>
+                <span class="capability-line" aria-hidden="true"></span>
+              </div>
+              <h3>交付文档</h3>
+              <p>
+                沉淀方案、汇报、测试、验收和交接材料，让项目过程可追踪、成果可验收。
+              </p>
+              <div class="capability-tags">
+                <span>方案设计</span>
+                <span>PPT 汇报</span>
+                <span>测试文档</span>
+                <span>交接方案</span>
+              </div>
+              <div class="capability-proof">项目支撑：数据归集系统运维交接</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 技能栈 -->
     <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title">AI 技术栈</h2>
-            <p class="section-subtitle">围绕大模型应用、知识库、智能问答、智能体编排和 AI 辅助交付构建能力组合。</p>
-            <div class="skills-container">
-                <div class="skill-tag skill-accent-violet">
-                    <span class="skill-icon">LLM</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">大模型应用</span>
-                        <span class="skill-desc">LLM Application</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-blue">
-                    <span class="skill-icon">RAG</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">RAG 检索增强</span>
-                        <span class="skill-desc">Retrieval Augmented</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-blue">
-                    <span class="skill-icon">KB</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">知识库构建</span>
-                        <span class="skill-desc">Knowledge Base</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-green">
-                    <span class="skill-icon">QA</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">智能问答</span>
-                        <span class="skill-desc">Q&amp;A System</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-violet">
-                    <span class="skill-icon">SQL</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">Text2SQL</span>
-                        <span class="skill-desc">Text to SQL</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-cyan">
-                    <span class="skill-icon">AGT</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">智能体编排</span>
-                        <span class="skill-desc">Agent Orchestration</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-violet">
-                    <span class="skill-icon">PMT</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">Prompt Engineering</span>
-                        <span class="skill-desc">Prompt Engineering</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-blue">
-                    <span class="skill-icon">OPS</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">自动化处理</span>
-                        <span class="skill-desc">Automation Ops</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-blue">
-                    <span class="skill-icon">DEMO</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">AI 原型开发</span>
-                        <span class="skill-desc">AI Prototype</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-cyan">
-                    <span class="skill-icon">TR</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">Trae</span>
-                        <span class="skill-desc">AI Dev Assistant</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-green">
-                    <span class="skill-icon">GPT</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">ChatGPT</span>
-                        <span class="skill-desc">AI Assistant</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-blue">
-                    <span class="skill-icon">CDX</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">Codex</span>
-                        <span class="skill-desc">Code Generation</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-violet">
-                    <span class="skill-icon">PY</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-desc">Programming</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-cyan">
-                    <span class="skill-icon">JV</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">Java/Spring</span>
-                        <span class="skill-desc">Backend</span>
-                    </span>
-                </div>
-                <div class="skill-tag skill-accent-violet">
-                    <span class="skill-icon">VIS</span>
-                    <span class="skill-copy">
-                        <span class="skill-name">Vue/可视化</span>
-                        <span class="skill-desc">Frontend</span>
-                    </span>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">AI 技术栈</h2>
+        <p class="section-subtitle">
+          围绕大模型应用、知识库、智能问答、智能体编排和 AI
+          辅助交付构建能力组合。
+        </p>
+        <div class="skills-container">
+          <div class="skill-tag skill-accent-violet">
+            <span class="skill-icon">LLM</span>
+            <span class="skill-copy">
+              <span class="skill-name">大模型应用</span>
+              <span class="skill-desc">LLM Application</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-blue">
+            <span class="skill-icon">RAG</span>
+            <span class="skill-copy">
+              <span class="skill-name">RAG 检索增强</span>
+              <span class="skill-desc">Retrieval Augmented</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-blue">
+            <span class="skill-icon">KB</span>
+            <span class="skill-copy">
+              <span class="skill-name">知识库构建</span>
+              <span class="skill-desc">Knowledge Base</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-green">
+            <span class="skill-icon">QA</span>
+            <span class="skill-copy">
+              <span class="skill-name">智能问答</span>
+              <span class="skill-desc">Q&amp;A System</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-violet">
+            <span class="skill-icon">SQL</span>
+            <span class="skill-copy">
+              <span class="skill-name">Text2SQL</span>
+              <span class="skill-desc">Text to SQL</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-cyan">
+            <span class="skill-icon">AGT</span>
+            <span class="skill-copy">
+              <span class="skill-name">智能体编排</span>
+              <span class="skill-desc">Agent Orchestration</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-violet">
+            <span class="skill-icon">PMT</span>
+            <span class="skill-copy">
+              <span class="skill-name">Prompt Engineering</span>
+              <span class="skill-desc">Prompt Engineering</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-blue">
+            <span class="skill-icon">OPS</span>
+            <span class="skill-copy">
+              <span class="skill-name">自动化处理</span>
+              <span class="skill-desc">Automation Ops</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-blue">
+            <span class="skill-icon">DEMO</span>
+            <span class="skill-copy">
+              <span class="skill-name">AI 原型开发</span>
+              <span class="skill-desc">AI Prototype</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-cyan">
+            <span class="skill-icon">TR</span>
+            <span class="skill-copy">
+              <span class="skill-name">Trae</span>
+              <span class="skill-desc">AI Dev Assistant</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-green">
+            <span class="skill-icon">GPT</span>
+            <span class="skill-copy">
+              <span class="skill-name">ChatGPT</span>
+              <span class="skill-desc">AI Assistant</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-blue">
+            <span class="skill-icon">CDX</span>
+            <span class="skill-copy">
+              <span class="skill-name">Codex</span>
+              <span class="skill-desc">Code Generation</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-violet">
+            <span class="skill-icon">PY</span>
+            <span class="skill-copy">
+              <span class="skill-name">Python</span>
+              <span class="skill-desc">Programming</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-cyan">
+            <span class="skill-icon">JV</span>
+            <span class="skill-copy">
+              <span class="skill-name">Java/Spring</span>
+              <span class="skill-desc">Backend</span>
+            </span>
+          </div>
+          <div class="skill-tag skill-accent-violet">
+            <span class="skill-icon">VIS</span>
+            <span class="skill-copy">
+              <span class="skill-name">Vue/可视化</span>
+              <span class="skill-desc">Frontend</span>
+            </span>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 项目经历 -->
     <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title">项目经历</h2>
-            <p class="section-subtitle">围绕政务信息化、数据运营服务、智能运维和 AI 应用落地，沉淀从需求、产品、实施到交付验收的完整项目经验。</p>
-            <div class="project-timeline">
-                <div class="project-timeline-item">
-                    <span class="project-node" aria-hidden="true"></span>
-                    <div class="card project-timeline-card">
-                        <div class="project-card-top">
-                            <span class="project-period">2025.10 - 至今</span>
-                            <span class="project-role">项目经理</span>
-                        </div>
-                        <h3 class="project-title">上海市大数据中心数据运营服务项目 - 智能运维平台</h3>
-                        <p class="project-description">
-                            参照 ITSM 运维服务管理流程，建设事件、问题、变更、发布四大核心流程，完善 SLA、值班、知识库和指标看板能力。
-                        </p>
-                        <ul class="project-highlights">
-                            <li>参与整体功能体系架构设计，绘制功能架构图，明确项目建设内容与边界。</li>
-                            <li>主导需求对接、产品设计和阶段性汇报，结合 Trae 与 Vibe Coding 快速产出功能原型。</li>
-                            <li>规划引入垂域大模型能力，支撑故障处置场景下的智能问答与自动化处置。</li>
-                        </ul>
-                        <div class="project-tags">
-                            <span class="tag">ITSM</span>
-                            <span class="tag">SLA</span>
-                            <span class="tag">知识库</span>
-                            <span class="tag">大模型</span>
-                            <span class="tag">智能运维</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-timeline-item">
-                    <span class="project-node" aria-hidden="true"></span>
-                    <div class="card project-timeline-card">
-                        <div class="project-card-top">
-                            <span class="project-period">2025.08 - 至今</span>
-                            <span class="project-role">项目经理</span>
-                        </div>
-                        <h3 class="project-title">上海市大数据中心数据运营服务项目 - AI 数博士</h3>
-                        <p class="project-description">
-                            部署公司 AI 智能问答产品并集成通义千问大模型，为政策法规、操作手册和指标数据提供智能问答、智能问数服务。
-                        </p>
-                        <ul class="project-highlights">
-                            <li>通过悬浮球构建统一问题入口，面向不同用户提供个性化智能问答体验。</li>
-                            <li>全流程把控需求调研、阶段汇报、现场部署、客户对接和进度监控。</li>
-                            <li>同步负责测试文档编制，项目已顺利完成中期验收。</li>
-                        </ul>
-                        <div class="project-tags">
-                            <span class="tag">AI 数博士</span>
-                            <span class="tag">通义千问</span>
-                            <span class="tag">智能问答</span>
-                            <span class="tag">智能问数</span>
-                            <span class="tag">中期验收</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-timeline-item">
-                    <span class="project-node" aria-hidden="true"></span>
-                    <div class="card project-timeline-card">
-                        <div class="project-card-top">
-                            <span class="project-period">2025.02 - 2025.08</span>
-                            <span class="project-role">项目经理</span>
-                        </div>
-                        <h3 class="project-title">上海市大数据中心数据运营服务项目 - 集成门户（移动端）</h3>
-                        <p class="project-description">
-                            建设上海市大数据资源平台移动端入口，覆盖资源中心、任务中心、消息中心和各单位情况等功能模块。
-                        </p>
-                        <ul class="project-highlights">
-                            <li>从需求调研到验收交付全周期参与，精准对齐客户需求并完成验收合同签订。</li>
-                            <li>围绕领导审美要求打磨视觉细节，优化指标联动下钻逻辑。</li>
-                            <li>适配多型号手机，提升委办用户移动端数据运营和功能服务体验。</li>
-                        </ul>
-                        <div class="project-tags">
-                            <span class="tag">移动端</span>
-                            <span class="tag">门户入口</span>
-                            <span class="tag">指标联动</span>
-                            <span class="tag">多机型适配</span>
-                            <span class="tag">验收交付</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-timeline-item">
-                    <span class="project-node" aria-hidden="true"></span>
-                    <div class="card project-timeline-card">
-                        <div class="project-card-top">
-                            <span class="project-period">2024.12 - 2025.02</span>
-                            <span class="project-role">项目经理</span>
-                        </div>
-                        <h3 class="project-title">上海市大数据中心数据运营服务项目 - 数据归集系统运维交接</h3>
-                        <p class="project-description">
-                            面向原厂商撤场后的系统承接场景，牵头制定交接工作方案，保障平台与业务平稳过渡。
-                        </p>
-                        <ul class="project-highlights">
-                            <li>明确交接范围、流程节点和风险评估，有序推进过渡交接与独立承接。</li>
-                            <li>接收操作手册、部署手册、开发手册等全量平台文档。</li>
-                            <li>组织业务流程培训，梳理剩余任务清单并制定后续推进计划。</li>
-                        </ul>
-                        <div class="project-tags">
-                            <span class="tag">运维交接</span>
-                            <span class="tag">风险评估</span>
-                            <span class="tag">文档承接</span>
-                            <span class="tag">业务培训</span>
-                            <span class="tag">推进计划</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-timeline-item">
-                    <span class="project-node" aria-hidden="true"></span>
-                    <div class="card project-timeline-card">
-                        <div class="project-card-top">
-                            <span class="project-period">2024.04 - 2024.12</span>
-                            <span class="project-role">Java 开发工程师</span>
-                        </div>
-                        <h3 class="project-title">浦东新区智慧政务 OA / 上期所办公 OA / 第七届进博会数字赋能服务</h3>
-                        <p class="project-description">
-                            基于微服务架构、Spring、Java 和 Vue2，参与政务信息化与办公 OA 项目建设，支撑关键功能按期落地。
-                        </p>
-                        <ul class="project-highlights">
-                            <li>根据需求清单完成单点登录、流程审批、权限管控等关键功能模块建设。</li>
-                            <li>掌握公司低代码产品并培养代码开发思路，提升业务功能交付效率。</li>
-                            <li>参与技术方案研讨，编写开发文档，配合第三方联调及 Bug 修复。</li>
-                        </ul>
-                        <div class="project-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Spring</span>
-                            <span class="tag">Vue2</span>
-                            <span class="tag">微服务</span>
-                            <span class="tag">OA</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">项目经历</h2>
+        <p class="section-subtitle">
+          围绕政务信息化、数据运营服务、智能运维和 AI
+          应用落地，沉淀从需求、产品、实施到交付验收的完整项目经验。
+        </p>
+        <div class="project-timeline">
+          <div class="project-timeline-item">
+            <span class="project-node" aria-hidden="true"></span>
+            <div class="card project-timeline-card">
+              <div class="project-card-top">
+                <span class="project-period">2025.10 - 至今</span>
+                <span class="project-role">项目经理</span>
+              </div>
+              <h3 class="project-title">
+                上海市大数据中心数据运营服务项目 - 智能运维平台
+              </h3>
+              <p class="project-description">
+                参照 ITSM
+                运维服务管理流程，建设事件、问题、变更、发布四大核心流程，完善
+                SLA、值班、知识库和指标看板能力。
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  参与整体功能体系架构设计，绘制功能架构图，明确项目建设内容与边界。
+                </li>
+                <li>
+                  主导需求对接、产品设计和阶段性汇报，结合 Trae 与 Vibe Coding
+                  快速产出功能原型。
+                </li>
+                <li>
+                  规划引入垂域大模型能力，支撑故障处置场景下的智能问答与自动化处置。
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">ITSM</span>
+                <span class="tag">SLA</span>
+                <span class="tag">知识库</span>
+                <span class="tag">大模型</span>
+                <span class="tag">智能运维</span>
+              </div>
             </div>
+          </div>
+          <div class="project-timeline-item">
+            <span class="project-node" aria-hidden="true"></span>
+            <div class="card project-timeline-card">
+              <div class="project-card-top">
+                <span class="project-period">2025.08 - 至今</span>
+                <span class="project-role">项目经理</span>
+              </div>
+              <h3 class="project-title">
+                上海市大数据中心数据运营服务项目 - AI 数博士
+              </h3>
+              <p class="project-description">
+                部署公司 AI
+                智能问答产品并集成通义千问大模型，为政策法规、操作手册和指标数据提供智能问答、智能问数服务。
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  通过悬浮球构建统一问题入口，面向不同用户提供个性化智能问答体验。
+                </li>
+                <li>
+                  全流程把控需求调研、阶段汇报、现场部署、客户对接和进度监控。
+                </li>
+                <li>同步负责测试文档编制，项目已顺利完成中期验收。</li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">AI 数博士</span>
+                <span class="tag">通义千问</span>
+                <span class="tag">智能问答</span>
+                <span class="tag">智能问数</span>
+                <span class="tag">中期验收</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-timeline-item">
+            <span class="project-node" aria-hidden="true"></span>
+            <div class="card project-timeline-card">
+              <div class="project-card-top">
+                <span class="project-period">2025.02 - 2025.08</span>
+                <span class="project-role">项目经理</span>
+              </div>
+              <h3 class="project-title">
+                上海市大数据中心数据运营服务项目 - 集成门户（移动端）
+              </h3>
+              <p class="project-description">
+                建设上海市大数据资源平台移动端入口，覆盖资源中心、任务中心、消息中心和各单位情况等功能模块。
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  从需求调研到验收交付全周期参与，精准对齐客户需求并完成验收合同签订。
+                </li>
+                <li>围绕领导审美要求打磨视觉细节，优化指标联动下钻逻辑。</li>
+                <li>
+                  适配多型号手机，提升委办用户移动端数据运营和功能服务体验。
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">移动端</span>
+                <span class="tag">门户入口</span>
+                <span class="tag">指标联动</span>
+                <span class="tag">多机型适配</span>
+                <span class="tag">验收交付</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-timeline-item">
+            <span class="project-node" aria-hidden="true"></span>
+            <div class="card project-timeline-card">
+              <div class="project-card-top">
+                <span class="project-period">2024.12 - 2025.02</span>
+                <span class="project-role">项目经理</span>
+              </div>
+              <h3 class="project-title">
+                上海市大数据中心数据运营服务项目 - 数据归集系统运维交接
+              </h3>
+              <p class="project-description">
+                面向原厂商撤场后的系统承接场景，牵头制定交接工作方案，保障平台与业务平稳过渡。
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  明确交接范围、流程节点和风险评估，有序推进过渡交接与独立承接。
+                </li>
+                <li>接收操作手册、部署手册、开发手册等全量平台文档。</li>
+                <li>组织业务流程培训，梳理剩余任务清单并制定后续推进计划。</li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">运维交接</span>
+                <span class="tag">风险评估</span>
+                <span class="tag">文档承接</span>
+                <span class="tag">业务培训</span>
+                <span class="tag">推进计划</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-timeline-item">
+            <span class="project-node" aria-hidden="true"></span>
+            <div class="card project-timeline-card">
+              <div class="project-card-top">
+                <span class="project-period">2024.04 - 2024.12</span>
+                <span class="project-role">Java 开发工程师</span>
+              </div>
+              <h3 class="project-title">
+                浦东新区智慧政务 OA / 上期所办公 OA / 第七届进博会数字赋能服务
+              </h3>
+              <p class="project-description">
+                基于微服务架构、Spring、Java 和 Vue2，参与政务信息化与办公 OA
+                项目建设，支撑关键功能按期落地。
+              </p>
+              <ul class="project-highlights">
+                <li>
+                  根据需求清单完成单点登录、流程审批、权限管控等关键功能模块建设。
+                </li>
+                <li>
+                  掌握公司低代码产品并培养代码开发思路，提升业务功能交付效率。
+                </li>
+                <li>
+                  参与技术方案研讨，编写开发文档，配合第三方联调及 Bug 修复。
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring</span>
+                <span class="tag">Vue2</span>
+                <span class="tag">微服务</span>
+                <span class="tag">OA</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 工作经历 -->
     <section id="experience" class="section experience">
-        <div class="container">
-            <h2 class="section-title">工作经历</h2>
-            <div class="experience-showcase">
-                <div class="experience-main-card">
-                    <div class="experience-card-top">
-                        <div>
-                            <span class="experience-period">2024.04 - 至今</span>
-                            <p class="experience-company">仪电双杨智能科技(上海)有限公司</p>
-                        </div>
-                        <span class="experience-status">
-                            <span class="status-line"></span>
-                            政务信息化与 AI 应用交付
-                        </span>
-                    </div>
-                    <h3 class="experience-position">项目经理 / Java 开发工程师</h3>
-                    <p class="experience-lead">
-                        深入参与上海市大数据中心数据运营服务项目，负责需求调研、方案设计、计划排期、实施推进、交付验收以及客户和第三方团队对接，保障需求精准转化、交付质量和客户满意度。
-                    </p>
-                    <div class="experience-focus-grid">
-                        <div class="experience-focus-item">
-                            <span class="focus-index">01</span>
-                            <h4>项目全周期管理</h4>
-                            <p>从全局视角统筹项目实施，主导产品方案设计、阶段性工作汇报和项目验收材料编制，确保成果符合业务预期。</p>
-                        </div>
-                        <div class="experience-focus-item">
-                            <span class="focus-index">02</span>
-                            <h4>关键系统建设</h4>
-                            <p>作为核心开发人员参与浦东新区智慧政务 OA、上期所办公 OA、第七届进博会数字赋能服务等项目，负责关键功能模块设计与开发。</p>
-                        </div>
-                        <div class="experience-focus-item">
-                            <span class="focus-index">03</span>
-                            <h4>AI 工具与原型开发</h4>
-                            <p>熟悉公司全线产品，熟练运用 Trae、ChatGPT、Codex 等 AI 工具，结合 Vibe Coding 快速开发原型系统，提升需求验证效率。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-growth-card">
-                    <span class="highlight-label">能力提升</span>
-                    <p>
-                        从项目开发人员向项目经理转变，促使我开始从更整体的视角思考问题，关注点也由“把功能做出来”延伸到功能易用性、整体交互体验和业务价值赋能。同时，从管理视角出发，熟练运用甘特图等工具拆解任务、追踪里程碑，并同步提升项目文档与 PPT 汇报材料撰写能力。
-                    </p>
-                </div>
-                <div class="education-strip">
-                    <div class="education-strip-heading">
-                        <span class="highlight-label">专业背景</span>
-                        <h3>软件工程与计算机科学</h3>
-                    </div>
-                    <div class="education-inline">
-                        <div class="education-item">
-                            <span class="education-period">2021.09 - 2024.06</span>
-                            <span class="education-school">江南大学</span>
-                            <span class="education-major">软件工程 / 硕士</span>
-                        </div>
-                        <div class="education-item">
-                            <span class="education-period">2017.09 - 2021.06</span>
-                            <span class="education-school">中国矿业大学徐海学院</span>
-                            <span class="education-major">计算机科学与技术 / 本科</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">工作经历</h2>
+        <div class="experience-showcase">
+          <div class="experience-main-card">
+            <div class="experience-card-top">
+              <div>
+                <span class="experience-period">2024.04 - 至今</span>
+                <p class="experience-company">仪电双杨智能科技(上海)有限公司</p>
+              </div>
+              <span class="experience-status">
+                <span class="status-line"></span>
+                政务信息化与 AI 应用交付
+              </span>
             </div>
+            <h3 class="experience-position">项目经理 / Java 开发工程师</h3>
+            <p class="experience-lead">
+              深入参与上海市大数据中心数据运营服务项目，负责需求调研、方案设计、计划排期、实施推进、交付验收以及客户和第三方团队对接，保障需求精准转化、交付质量和客户满意度。
+            </p>
+            <div class="experience-focus-grid">
+              <div class="experience-focus-item">
+                <span class="focus-index">01</span>
+                <h4>项目全周期管理</h4>
+                <p>
+                  从全局视角统筹项目实施，主导产品方案设计、阶段性工作汇报和项目验收材料编制，确保成果符合业务预期。
+                </p>
+              </div>
+              <div class="experience-focus-item">
+                <span class="focus-index">02</span>
+                <h4>关键系统建设</h4>
+                <p>
+                  作为核心开发人员参与浦东新区智慧政务 OA、上期所办公
+                  OA、第七届进博会数字赋能服务等项目，负责关键功能模块设计与开发。
+                </p>
+              </div>
+              <div class="experience-focus-item">
+                <span class="focus-index">03</span>
+                <h4>AI 工具与原型开发</h4>
+                <p>
+                  熟悉公司全线产品，熟练运用 Trae、ChatGPT、Codex 等 AI
+                  工具，结合 Vibe Coding 快速开发原型系统，提升需求验证效率。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="experience-growth-card">
+            <span class="highlight-label">能力提升</span>
+            <p>
+              从项目开发人员向项目经理转变，促使我开始从更整体的视角思考问题，关注点也由“把功能做出来”延伸到功能易用性、整体交互体验和业务价值赋能。同时，从管理视角出发，熟练运用甘特图等工具拆解任务、追踪里程碑，并同步提升项目文档与
+              PPT 汇报材料撰写能力。
+            </p>
+          </div>
+          <div class="education-strip">
+            <div class="education-strip-heading">
+              <span class="highlight-label">专业背景</span>
+              <h3>软件工程与计算机科学</h3>
+            </div>
+            <div class="education-inline">
+              <div class="education-item">
+                <span class="education-period">2021.09 - 2024.06</span>
+                <span class="education-school">江南大学</span>
+                <span class="education-major">软件工程 / 硕士</span>
+              </div>
+              <div class="education-item">
+                <span class="education-period">2017.09 - 2021.06</span>
+                <span class="education-school">中国矿业大学徐海学院</span>
+                <span class="education-major">计算机科学与技术 / 本科</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 联系我 -->
     <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title">联系我</h2>
-            <div class="contact-container">
-                <div class="contact-intro">
-                    <h3 class="contact-heading">期待与你交流 🤝</h3>
-                    <p class="contact-text">
-                        如果你对任何职位感兴趣，或者想探讨合作机会，欢迎随时联系我。
-                    </p>
-                    <a href="mailto:ccshi730@126.com" class="btn btn-primary">
-                        <span class="btn-icon">✉️</span>
-                        发送邮件
-                    </a>
-                </div>
-                <div class="contact-cards">
-                    <div class="card contact-card">
-                        <div class="contact-icon"></div>
-                        <h4 class="contact-label">邮箱</h4>
-                        <a href="mailto:ccshi730@126.com" class="contact-value">ccshi730@126.com</a>
-                    </div>
-                    <div class="card contact-card">
-                        <div class="contact-icon">🐙</div>
-                        <h4 class="contact-label">GitHub</h4>
-                        <a href="https://github.com/yourname" target="_blank" class="contact-value">github.com/zhangsan</a>
-                    </div>
-                    <div class="card contact-card">
-                        <div class="contact-icon">📄</div>
-                        <h4 class="contact-label">简历下载</h4>
-                        <a href="resume.pdf" class="contact-value" download>下载我的 PDF 简历</a>
-                    </div>
-                    <div class="card contact-card">
-                        <div class="contact-icon">📍</div>
-                        <h4 class="contact-label">所在地</h4>
-                        <p class="contact-value">中国 · 上海</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">联系我</h2>
+        <div class="contact-container">
+          <div class="contact-intro">
+            <h3 class="contact-heading">期待与你交流 🤝</h3>
+            <p class="contact-text">
+              如果你对任何职位感兴趣，或者想探讨合作机会，欢迎随时联系我。
+            </p>
+            <a href="mailto:ccshi730@126.com" class="btn btn-primary">
+              <span class="btn-icon">✉️</span>
+              发送邮件
+            </a>
+          </div>
+          <div class="contact-cards">
+            <div class="card contact-card">
+              <div class="contact-icon"></div>
+              <h4 class="contact-label">邮箱</h4>
+              <a href="mailto:ccshi730@126.com" class="contact-value"
+                >ccshi730@126.com</a
+              >
             </div>
+            <div class="card contact-card">
+              <div class="contact-icon">🐙</div>
+              <h4 class="contact-label">GitHub</h4>
+              <a
+                href="https://github.com/sccWisdom"
+                target="_blank"
+                class="contact-value"
+                >github.com/sccWisdom</a
+              >
+            </div>
+            <div class="card contact-card">
+              <div class="contact-icon">📄</div>
+              <h4 class="contact-label">简历下载</h4>
+              <a href="#" class="contact-value" onclick="downloadResume(); return false;">
+                下载我的 PDF 简历</a>
+            </div>
+            <div class="card contact-card">
+              <div class="contact-icon">📍</div>
+              <h4 class="contact-label">所在地</h4>
+              <p class="contact-value">中国 · 上海</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 页脚 -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">© 2026 石铖铖。Built with GitHub Pages.</p>
-                <div class="footer-links">
-                    <a href="https://github.com/yourname" target="_blank" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="mailto:ccshi730@126.com" aria-label="邮箱">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">© 2026 石铖铖。Built with GitHub Pages.</p>
+          <div class="footer-links">
+            <a
+              href="https://github.com/sccWisdom"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a href="mailto:ccshi730@126.com" aria-label="邮箱">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
+      </div>
     </footer>
 
+    <script src="assets/js/download-resume.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/cube-animation.js"></script>
-</body>
+  </body>
 </html>

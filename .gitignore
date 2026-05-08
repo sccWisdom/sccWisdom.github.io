@@ -16,3 +16,6 @@ temp/
 *.swo
 # Added by code-review-graph
 .code-review-graph/
+
+# 敏感文件
+assets/presumption/
