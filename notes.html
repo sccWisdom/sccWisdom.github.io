@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="石铖铖的学习笔记 - 大模型训练与推理方法">
+    <title>学习笔记 | 石铖铖</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="notes-page">
+    <nav class="navbar notes-navbar">
+        <div class="container nav-container">
+            <div class="logo">sccWisdom.dev</div>
+            <button class="mobile-menu-btn" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">首页</a></li>
+                <li><a href="index.html#about" class="nav-link">关于我</a></li>
+                <li><a href="index.html#skills" class="nav-link">技能栈</a></li>
+                <li><a href="notes.html" class="nav-link active">学习笔记</a></li>
+                <li><a href="index.html#projects" class="nav-link">项目经历</a></li>
+                <li><a href="index.html#experience" class="nav-link">工作经历</a></li>
+                <li><a href="index.html#contact" class="nav-link">联系我</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="notes-main">
+        <section class="notes-hero">
+            <div class="container">
+                <p class="notes-eyebrow">Knowledge Base</p>
+                <h1 class="notes-title">学习笔记</h1>
+                <p class="notes-subtitle">把日常学习内容整理成可检索、可复盘、可复用的知识条目。</p>
+            </div>
+        </section>
+
+        <section class="notes-board">
+            <div class="container">
+                <div class="notes-toolbar">
+                    <div class="notes-filter-group" id="notesFilterGroup"></div>
+                    <div class="notes-search-wrap">
+                        <label for="noteSearchInput" class="notes-search-label">搜索</label>
+                        <input id="noteSearchInput" class="notes-search-input" type="text" placeholder="输入关键词，例如 SFT、GRPO、MCTS">
+                    </div>
+                </div>
+
+                <div id="notesList" class="notes-list"></div>
+                <p id="notesEmptyState" class="notes-empty-state">没有匹配内容，请尝试其他关键词。</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/notes.js"></script>
+</body>
+</html>

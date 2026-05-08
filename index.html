@@ -10,6 +10,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
+    <!-- Loading 页面 -->
+    <div id="loading-overlay">
+        <div class="loading-background">
+            <div class="loading-particles"></div>
+            <div class="loading-ambient-orb loading-orb-1"></div>
+            <div class="loading-ambient-orb loading-orb-2"></div>
+            <div class="loading-grid-overlay"></div>
+        </div>
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">PORTFOLIO</span>
+                <span class="logo-bracket">]</span>
+            </div>
+            <div class="loading-progress-container">
+                <div class="loading-progress-track">
+                    <div class="loading-progress-bar">
+                        <div class="loading-progress-glow"></div>
+                    </div>
+                    <div class="loading-progress-text">
+                        <span class="loading-percent">0</span>
+                        <span class="loading-percent-symbol">%</span>
+                    </div>
+                </div>
+                <div class="loading-status-text">Initializing systems...</div>
+            </div>
+            <div class="loading-tips">Powered by Three.js & Canvas</div>
+        </div>
+        <button class="loading-skip-btn">跳过 ></button>
+    </div>
+
     <!-- 导航栏 -->
     <nav class="navbar home-hidden">
         <div class="container nav-container">
@@ -23,6 +54,7 @@
                 <li><a href="#home" class="nav-link active">首页</a></li>
                 <li><a href="#about" class="nav-link">关于我</a></li>
                 <li><a href="#skills" class="nav-link">技能栈</a></li>
+                <li><a href="notes.html" class="nav-link">学习笔记</a></li>
                 <li><a href="#projects" class="nav-link">项目经历</a></li>
                 <li><a href="#experience" class="nav-link">工作经历</a></li>
                 <li><a href="#contact" class="nav-link">联系我</a></li>
